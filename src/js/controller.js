@@ -6,12 +6,6 @@ import BookRideView from "./View/bookRideView.js";
 const controlBooked = function(){
   BookRideView.renderSpinner();
   setTimeout(()=>{
-    if(model.state.bookRide === undefined){
-     BookRideView.render({
-      destinationName: '',
-      locationName: ''
-     })
-    }
     BookRideView.render(model.state.bookRide);
   }, 5000);
  

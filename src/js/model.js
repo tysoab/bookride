@@ -35,7 +35,13 @@ export const LoadLocation = async function(data = {}){
 
 const getLocalStorage = function(){
   const storage = JSON.parse(localStorage.getItem('bookRide'));
-  if(!storage) return;
+  if(!storage){
+    state.bookRide = {
+      destinationName: '',
+      locationName: ''
+     }
+     return;
+  }
   state.bookRide = storage;
 }
 getLocalStorage();
