@@ -6,7 +6,10 @@ import BookRideView from "./View/bookRideView.js";
 const controlBooked = function(){
   BookRideView.renderSpinner();
   setTimeout(()=>{
-     BookRideView.render(model.state.bookRide);
+    if(!model.state.bookRide){
+     return;
+    }
+    BookRideView.render(model.state.bookRide);
   }, 5000);
  
 }
