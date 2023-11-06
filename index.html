@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uber clone || tysoab@gmail.com</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+   integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+   crossorigin=""/>
+    <link rel="stylesheet" href="src/styles/style.css">
+    <script defer src="https://kit.fontawesome.com/dad8ebce2d.js" crossorigin="anonymous"></script>
+    <script defer src="src/js/controller.js"></script>
+
+</head>
+<body>
+  <header id="top">
+    <a class="logo" href="index.html">
+      <i class="fa-solid fa-car"></i>
+      ride</a>
+    <div class="left-navbar" id="toggle-menu">
+        <div >
+        <li class="cm-dropdown list-item"><a>Company &nbsp;<i class="fa-solid fa-caret-down"></i></a>
+          <ul class="dropdown-container hidden">
+            <li class="list-item-2"><a href="">About us</a></li>
+            <li class="list-item-2"><a href="">Our offerings</a></li>
+            <li class="list-item-2"><a href="">Uber works</a></li>
+            <li class="list-item-2"><a href="">Global citizenship</a></li>
+            <li class="list-item-2"><a href="">Newsroom</a></li>
+            <li class="list-item-2"><a href="">Investors relation</a></li>
+            <li class="list-item-2"><a href="">Blog</a></li>
+            <li class="list-item-2"><a href="">Careers</a></li>
+          </ul>
+        </li>
+        <li class="list-item"><a href="#">Safety</a></li>
+        <li class="list-item"><a href="#">Help</a></li>
+        </div>
+        <div>
+        <li class="pd-dropdown"><a><i class="fa-solid fa-braille"></i> &nbsp;Products</a>
+          <ul class="dropdown-container hidden">
+            <li class="list-item"><a href="index.html">Home</a></li>
+            <li class="list-item"><a href="">Ride</a></li>
+            <li class="list-item"><a href="">Drive</a></li>
+            <li class="list-item"><a href="">Eat</a></li>
+            <li class="list-item"><a href="">Merchants</a></li>
+            <li class="list-item"><a href="">Freight</a></li>
+            <li class="list-item"><a href="">Bike & Scoot</a></li>
+            <li class="list-item"><a href="">Transit</a></li>
+            <li class="list-item"><a href="">Money</a></li>
+          </ul>
+          </li>
+          </div>
+    </div>
+    <div class="right-navbar">
+      
+        <li class="login-btn"><a href="#">Log in</a></li>
+        <li class="signup-btn"><a href="#">Sign up</a></li>
+        <li class="toggle-menu-container hidden"><i class="fa-solid fa-bars"></i></li>
+      
+    </div>
+  </header>
+
+  <div class="operation-container">
+    <div class="operation-header">
+      <div class="operation operation-active" data-id="1">
+        <i class="fa-solid fa-car"></i>
+        <p>Drive or <br> deliver</p>
+      </div>
+      <div class="operation" data-id="2">
+        <i class="fa-solid fa-bowl-food"></i>
+        <p><br>Eat</p>
+      </div>
+      <div class="operation" data-id="3">
+        <i class="fa-solid fa-car"></i>
+        <p><br>Ride</p>
+      </div>
+    </div>
+
+    <div class="operation-content operation-content-1">
+      <h2>Get in the driver's Seat and get paid</h2>
+      <p>Drive on the platform with the largest network of active riders.</p>
+      <button>Sign up to drive</button>
+
+      <a href="#">Learn more about driving and delivering</a>
+    </div>
+
+    <div class="operation-content operation-content-2 hidden">
+      <h2>Discover delicious eats</h2>
+      <p>Order delivery from restaurants you love</p>
+      <button>Order now</button>
+
+      <a href="#">Own a restaurant? Partner with Uber Eats</a>
+    </div>
+
+    <div class="operation-content operation-content-3 hidden"></div>
+
+  </div>
+  <div class="modal-container">
+    <img src="src/images/operation-1.webp" class="operation-img">
+  </div>
+  <div class="section" id="map-section">
+    <div id="map"></div>
+  </div>
+  <div class="section" id="section1">
+    <h2>The Uber you know, reimagined for business</h2>
+    <p>A platform for managing global rides and meals, and local deliveries, for companies of any size.</p>
+    <button class="btn">Get started</button>
+  </div>
+
+  <div class="section" id="section2">
+    <h2>Focused on safety, wherever you go</h2>
+    <div class="section-content">
+      <div>
+        <img src="src/images/Safety_Home_Img2x.webp">
+        <h3>Our commitment to your safety</h3>
+        <p>With every safety feature and every standard in our Community Guidelines, we're committed to helping to create a safe environment for our users.</p>
+        <a href="">Read about our Community Guidelines</a>
+        <a href="">See all safety features</a>
+      </div>
+
+      <div>
+        <img src="src/images/Cities_Home_Img2x.webp">
+        <h3>Setting 10,000+ cities in motion</h3>
+        <p>The app is available in thousands of cities worldwide, so you can request a ride even when you’re far from home.</p>
+        <a href="">View all cities</a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="section" id="section3">
+    <div class="section-content">
+      <div>
+        <img src="src/images/person-multiple-outlined.svg">
+        <h3>About us</h3>
+        <p>
+          Find out how we started, what drives us, and how we’re reimagining how the world moves.</p>
+        <a href="">Learn more about Uber</a>
+        
+      </div>
+
+      <div>
+        <img src="src/images/document-outlined.svg">
+        <h3>Newsroom</h3>
+        <p>See announcements about our latest releases, initiatives, and partnerships.</p>
+        <a href="">Go to Newsroom</a>
+      </div>
+
+      <div>
+        <img src="src/images/home-outlined.svg">
+        <h3>Global citizenship</h3>
+        <p>Read about our commitment to making a positive impact in the cities we serve.</p>
+        <a href="">See our partnerships</a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="section" id="section4">
+    <h2>There’s more to love in the apps</h2>
+    <div class="section-content">
+      <div>
+        <img src="src/images/dl-u-app.PNG">
+      </div>
+
+      <div>
+        <img src="src/images/dl-u-app.PNG">
+      </div>
+
+    </div>
+  </div>
+
+  <div class="section" id="section5">
+    <div class="section-content">
+      
+        <a href="">Sign up to drive <i>&rarr;</i></a>
+        
+        <a href="">Sign in to drive <i>&rarr;</i></a>
+      
+
+    </div>
+  </div>
+
+  <footer class="section">
+    <h2>
+      <i class="fa-solid fa-car"></i>
+      ride
+    </h2>
+    <a href="">Visit Help Center</a>
+    <div class="footer-content footer1">
+      <div>
+        <h3>Comapany</h3>
+        <a href="">About us</a>
+        <a href="">Our offerings</a>
+        <a href="">Newsroom</a>
+        <a href="">Investors</a>
+        <a href="">Blog</a>
+        <a href="">Careers</a>
+        <a href="">AI</a>
+        <a href="">Gift card</a>
+      </div>
+      <div>
+        <h3>Products</h3>
+        <a href="">Ride</a>
+        <a href="">Drive</a>
+        <a href="">Eat</a>
+        <a href="">Uber Freight</a>
+      </div>
+      <div>
+        <h3>Global citizenship</h3>
+        <a href="">Safety</a>
+        <a href="">Diversity and Inclusion</a>
+      </div>
+      <div>
+        <h3>Travel</h3>
+        <a href="">Airports</a>
+        <a href="">Cities</a>
+      </div>
+  </div>
+
+  <div class="footer-content footer2">
+    <div class="left-footer-link2">
+      <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+      <a href=""><i class="fa-brands fa-twitter"></i></a>
+      <a href=""><i class="fa-brands fa-youtube"></i></a>
+      <a href=""><i class="fa-brands fa-linkedin"></i></a>
+      <a href=""><i class="fa-brands fa-instagram fa-flip"></i></a>
+    </div>
+    <div class="right-footer-link2">
+      <a href="">English</a>
+      <a href="">Lagos</a>
+    </div>
+  </div>
+
+  <div class="footer-content footer3">
+    <div>
+      <p>&copy; tysoab@gamil.com || cloned Uber.com</p>
+    </div>
+    <div class="right-footer-link3">
+      <a href="">Privacy</a>
+      <a href="">Accessibility</a>
+      <a href="">Terms</a>
+    </div>
+  </div>
+  </footer>
+
+  <a class="backToTop-container" href="#top">
+    <p>&uarr;</p>
+  </div>
+  
+</body>
+</html>

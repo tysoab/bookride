@@ -1,0 +1,19 @@
+{
+  "name": "uber",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html",
+    "build": "parcel build index.html --out-dir ./dist"
+  },
+  "author": "tysoab-tysoab@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "core-js": "^3.32.1",
+    "leaflet": "^1.9.4",
+    "parcel-bundler": "^1.12.5",
+    "regenerator-runtime": "^0.14.0"
+  }
+}
